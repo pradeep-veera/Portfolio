@@ -1,0 +1,170 @@
+.pages{
+    display:flex;
+    width:100%;
+    min-height:400px;
+    flex-direction:column;
+    .title{
+    
+    }
+    .content{
+    
+    }
+}
+
+.banner{
+	display:flex;
+	width:100%;
+	margin-bottom:15px;
+	.pages{
+		display:flex;
+		min-height:400px;
+		flex-direction:column;
+		border-radius: 5px;
+        box-shadow: 0px 0px 5px 0px;
+		padding: 10px;
+        background: #fff;
+        opacity: 0.9;  	
+		.title{
+			a:hover{
+				text-decoration:none;
+			}			
+		}
+		.content{
+			margin: 15px 0px 15px 0px;	
+		}
+	}
+
+	#frontpage{
+		order:2;
+		width:30%;
+		margin-left:10px;
+        height:440px;
+		position:relative;
+		.content{
+			.image{
+				display:block;
+				text-align:center;
+				img{
+					border-radius: 50%;
+					width: 250px;
+				}
+			}
+			.page_content{
+				ul{
+					margin-left:25px;
+					list-style: none;
+					li{
+						margin: 12px 0px;
+						position:relative;
+						span.glyphicon-home{
+							position: absolute;
+							left: -22px;
+							top: 3px;							
+						}
+						span.glyphicon-phone{
+							position: absolute;
+							left: -22px;
+							top: 3px;							
+						}
+						span.glyphicon-envelope{
+							position: absolute;
+							left: -22px;
+							top: 5px;							
+						}
+					}
+				}
+			}	
+		}
+	}
+	
+	#page_aboutme{
+		width:75%;
+		order:1;
+		margin-right:10px;
+        margin-left:-50px;
+        min-height:470px;
+		position:relative;
+		&:hover{
+			h1.title{
+				color: #ff1d12;
+				opacity :0.3;
+				a{
+
+				}
+			}
+		}
+        &:before{
+            content:"";
+            //background:url('images/aboutme.svg');
+            position:absolute;
+            width:20px;
+            height:20px;
+            left:0px;
+            top:0px;
+            display:block;
+        }		
+	}
+	
+	#page_skills{
+		order:2;
+		width:90%;
+		margin:0px auto;
+		position:relative;
+		.bx-viewport{
+			height:245px !important;
+		}	
+		&:hover{
+			h1.title{
+				color: #9d12ff;
+				opacity :0.3;
+			}
+		}
+	}
+	
+	#page_experience{
+		order:1;
+		width:100%;
+		margin-left:10px;
+		position:relative;
+		&:hover{
+			h1.title{
+				color: #12ff12;
+				opacity :0.3;
+			}
+		}		
+	}
+
+	#page_education{
+		order:1;
+		width:100%;
+		position:relative;
+		&:hover{
+			h1.title{
+				color: #ff9812;
+				opacity :0.3;
+			}
+		}		
+	}
+	#page_portfolio{
+		order:1;
+		width:100%;
+		position:relative;	
+		&:hover{
+			h1.title{
+				color: #ff9812;
+				opacity :0.3;
+			}
+		}		
+	}
+	#page_contact{
+		order:1;
+		width:100%;
+		position:relative;
+		&:hover{
+			h1.title{
+				color: #ff9812;
+				opacity :0.3;
+			}
+		}		
+	}		
+}

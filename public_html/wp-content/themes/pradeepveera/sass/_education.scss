@@ -1,0 +1,40 @@
+#page_education{
+	ul.educations{
+		list-style:none;
+		margin:0px 45px;
+		li.education{
+			list-style-type:none;
+			margin:20px 0px;
+			position:relative;
+			.education-name{
+				position:relative;
+				font-size:25px;
+				. glyphicon-education{
+					position:absolute;
+					left:-45px;
+					top:6px;
+				}
+			}
+			.education-level{
+				h2{
+					margin: 15px 0px 5px 0px;
+				}
+				ul{
+					margin:0px;
+					list-style:none;
+					li{
+						
+					}
+				}
+			}
+			.year{
+				position: absolute;
+				right: 0;
+				top: -15px;
+				font-size: 40px;
+				font-weight: 500;
+				opacity: 0.2;
+			}
+		}
+	}
+}

@@ -1,0 +1,50 @@
+/* =Content
+----------------------------------------------- */
+
+.sticky {
+}
+.hentry {
+	margin: 0 0 $vspacing;
+}
+.byline,
+.updated {
+	display: none;
+}
+.single, .group-blog {
+	.byline {
+		display: inline;
+	}
+}
+
+.entry-meta {
+	.posted-on {
+		display: inline-block;
+		margin: 0.5em 0;
+		color: lighten($font-color, 50%);
+	}
+}
+
+.page-content,
+.entry-content,
+.entry-summary {
+	margin: $vspacing 0 0 0;
+	a.more-link {
+		display: inline-block;
+		margin: 0.5em 0;
+	}
+}
+.page-links {
+	clear: both;
+	margin: 0 0 $vspacing;
+}
+
+.glyphicon-education{
+	position:absolute;
+	left:-40px;
+}
+
+
+#google-map {
+	height: 500px;
+}
+

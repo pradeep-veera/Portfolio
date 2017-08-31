@@ -1,0 +1,52 @@
+	.bx-controls{
+        .bx-controls-direction{
+            position: absolute;
+            display: block;
+            left: 0;
+            width: 50%;
+            margin: 0px auto;
+            text-align: center;
+			bottom:50px;
+            right: 0;  
+            a.bx-prev,
+            a.bx-next {
+                z-index: 5;
+                position: absolute;
+                display: inline-block;
+                color: transparent;                 
+            }  
+            a.bx-prev{
+                left:0px;
+                &:after{
+                    content: "";
+                    display: block;
+                    position: absolute;
+					width:8px;
+                    border: solid black;
+                    border-width: 0px 1px 1px 0px;
+                    height: 8px;
+                    left: 17px;
+                    transform: rotate(135deg);
+                    top: 15px;                   
+                }
+            }
+            a.bx-next{
+                right:0px;
+                 &:after{
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    width: 8px;
+                    border: solid black;
+                    border-width: 0px 1px 1px 0px;
+                    height: 8px;
+                    left: 13px;
+                    transform: rotate(-45deg);
+                    top: 15px;                   
+                }               
+            }                   
+        }
+        .bx-pager.bx-default-pager{
+			display:none;
+        }
+    }

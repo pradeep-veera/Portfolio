@@ -1,0 +1,155 @@
+/* =Menu
+----------------------------------------------- */
+
+
+
+.main-navigation {
+	
+	// first level
+	> ul {
+		@extend %clearfix;
+		list-style: none;
+        margin: 0 auto;
+        padding: 0;
+        width: 100%;
+		> li {			
+			float: left;
+			position: relative;
+			margin: 0 10px;	
+			display:block;
+			width:auto;
+			> a {
+				display: block;
+				padding: 14px 10px 5px 10px;
+				color: $font-color;
+				width:100%;
+				text-decoration: none;
+				font-size: 14px;
+				font-weight: 700;
+				text-transform: uppercase;
+			}
+
+			&:hover {
+				> a { }
+				> ul { display: inline-block; }
+			}
+			
+			&:hover,
+			&.current-menu-item,
+			&.current-menu-parent {
+				> a {					
+                        border-bottom:1px dashed $font-color;
+				}
+			}
+		}
+        li.insta{
+            position:absolute;
+            right:40px;
+			a{
+				color:transparent;
+				&:before{
+					content: "";
+					background: url(images/linkedin_alt.svg);
+					background-repeat: no-repeat;
+					width: 35px;
+					background-size: cover;
+					height: 35px;
+					display: block;
+					position: absolute;
+					bottom:-6px
+				}				
+			}
+			&:hover{
+				a{
+					border-bottom:none;
+				}
+			}
+        }
+        
+        li.face{
+            position:absolute;
+            right:0px;
+			a{
+				color:transparent;
+				&:before{
+					content: "";
+					background: url(images/facebook_alt.svg);
+					background-repeat: no-repeat;
+					width: 35px;
+					background-size: cover;
+					height: 35px;
+					display: block;
+					position: absolute;
+					bottom:-6px;
+				}				
+			}
+			&:hover{
+				a{
+					border-bottom:none;
+				}
+			}			
+        }
+		li.git{
+            position:absolute;
+            right:100px;
+			bottom:-3px;
+			a{
+				color:transparent;
+				&:before{
+					content: "";
+					background: url(images/github.svg);
+					background-repeat: no-repeat;
+					width: 35px;
+					background-size: cover;
+					height: 35px;
+					display: block;
+					position: absolute;
+					bottom:-6px;
+				}				
+			}
+			&:hover{
+				a{
+					border-bottom:none;
+				}
+			}				
+		}
+
+		// second level
+		ul {
+			display: none;
+			list-style: none;
+			width: 200px;
+			margin: 0px 0px 0px -100px;
+			position: absolute;
+				top: 20px;
+				left: 50%;
+			padding: 12px 20px 20px;
+			z-index: 99;
+
+			li {
+				margin: 2px 0px;
+				float: none;
+				display: block;				
+				a {
+					display: block;
+					padding: 5px 10px;
+					text-align: center;
+					color: #ffffff;
+					background: #e11d2a;
+					text-decoration: none;
+					text-transform: none;								
+				}
+				
+				&:hover,
+				&.current-menu-item,
+				&.current-menu-parent {
+					a {					
+						color: #303030;
+						
+					}
+				}
+			}
+		}
+	}
+}
+

@@ -1,0 +1,41 @@
+
+#page_portfolio{
+	ul.portfolios{
+		list-style:none;
+		margin:0px 45px;
+		li.portfolio{
+			list-style-type:none;
+			margin:20px 0px;
+			position:relative;
+			.portfolio-name{
+				position:relative;
+				font-size:25px;
+				.glyphicon-paperclip{
+					position:absolute;
+					left:-45px;
+					top:6px;
+				}
+			}
+			.portfolio-level{
+				h2{
+					margin: 15px 0px 5px 0px;
+				}
+				ul{
+					margin:0px;
+					list-style:none;
+					li{
+						
+					}
+				}
+			}
+			.year{
+				position: absolute;
+				right: 0;
+				top: -15px;
+				font-size: 40px;
+				font-weight: 500;
+				opacity: 0.2;
+			}
+		}
+	}
+}

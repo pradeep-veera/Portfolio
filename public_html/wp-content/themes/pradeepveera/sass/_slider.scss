@@ -1,0 +1,78 @@
+	.bx-controls{
+        position: relative;
+        .bx-controls-direction{
+            position: absolute;
+            display: block;
+            left: 0;
+            width: 30%;
+            margin: 0px auto;
+            /* background: red; */
+            text-align: center;
+            right: 0;  
+            a.bx-prev,
+            a.bx-next {
+                z-index: 5;
+                position: absolute;
+                display: inline-block;
+                width: 42px;
+                height: 42px;
+                border-radius: 50%;
+                background: #fff;
+                border: 1px solid black;
+                color: transparent;                 
+            }  
+            a.bx-prev{
+                left:0px;
+                &:after{
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    width: 10px;
+                    border: solid black;
+                    border-width: 0px 5px 5px 0px;
+                    height: 10px;
+                    left: 17px;
+                    transform: rotate(135deg);
+                    top: 15px;                   
+                }
+            }
+            a.bx-next{
+                right:0px;
+                 &:after{
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    width: 10px;
+                    border: solid black;
+                    border-width: 0px 5px 5px 0px;
+                    height: 10px;
+                    left: 13px;
+                    transform: rotate(-45deg);
+                    top: 15px;                   
+                }               
+            }                   
+        }
+        .bx-pager.bx-default-pager{
+            position: absolute;
+            left: 0px;
+            right: 0px;
+            margin: 0px auto;
+            //width: 200px;
+            text-align: center;        
+            .bx-pager-item{
+                display: inline-block;
+                margin: 12px 18px;
+                a{
+                    display:block;
+                    height: 15px;
+                    width: 15px;
+                    background: #a2a0a0;
+                    border-radius: 50%;
+                    color: transparent;                
+                }
+                a.active{
+                    background:$font-color !important;
+                }
+            }
+        }
+    }

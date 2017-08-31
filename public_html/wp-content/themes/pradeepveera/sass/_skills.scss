@@ -1,0 +1,40 @@
+
+
+ul.skills{
+	margin: 0px 0px;
+    list-style: none;
+    display: inline-flex;
+    flex-wrap: wrap;	
+	li.skill{
+		display: flex;
+		width: 25%;
+		height: 40px;
+		flex-direction: column;
+		margin:5px 30px;
+		div.skill-name{
+				
+		}
+		div.skill-level{
+			display: block;
+			width: 100%;
+			height: 20px;
+			box-sizing: border-box;
+			border-style: solid;
+			border-color: #000;
+			border-width: 1px;
+			border-radius: 5px;	
+			color:#fff;
+			.percent{
+				display: block;
+				height: 110%;
+				background: #000;
+				box-sizing: border-box;
+				border-style: solid;
+				border-color: #000;
+				border-width: 1px;
+				border-radius: 5px;		
+				margin-top:-1px;
+			}
+		}				
+	}
+}

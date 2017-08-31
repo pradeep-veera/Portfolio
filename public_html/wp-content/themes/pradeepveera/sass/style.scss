@@ -1,0 +1,204 @@
+/*
+Theme Name: MyTheme
+Author: pradeep
+Description: 
+Version: 1.2
+Text Domain: Protfolio
+*/
+
+@import 'settings';
+@import 'reset';
+@import 'mixins';
+
+@import 'global';
+@import 'typography';
+@import 'forms';
+@import 'menu';
+@import 'mmenu';
+@import 'content';
+@import 'media';
+@import 'navigation';
+@import 'widgets';
+@import 'frontpage';
+@import 'education';
+@import 'experience';
+@import 'portfolio';
+@import 'slider';
+@import 'skills';
+
+
+
+.blablatext {}
+
+
+.inner {
+	position: relative;
+	margin: 0 auto;
+	padding: 0 10px;
+	max-width: $content-width + 20;
+	@extend %clearfix;
+}
+
+#particles-js{
+    position: fixed;
+    width: 100%;
+    height: auto;
+}
+
+html, body {
+	height: 100%;
+	padding: 0;
+	margin: 0;
+}
+
+html {
+	
+}
+
+body {
+	min-width: 320px;
+	font-family: $base-font;
+	font-size: $font-size;
+	font-weight: $font-weight;
+	line-height: $line-height;
+	color: $font-color;	
+}
+
+#page {
+	position: relative;
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	overflow: hidden;
+	background: #fff;
+	transition: transform 500ms ease-in;
+	box-shadow: 0 0 10px #000;
+	@media ( max-width: $breakpoint-mobile ) {
+		.mmenu-open & {
+			transform: translate(-80%,0);
+			.dark-layer{
+				display:block;
+			}
+		}
+	}
+}
+
+// To close the mobile menu when clicked on page.
+.dark-layer{
+	display:none;
+	position:fixed;
+	top:0;
+	bottom:0;
+	left:0;
+	right:0;
+	@media ( max-width: $breakpoint-mobile ) {
+	//	display:block;
+	}	
+}
+.dark-layer-page{
+	position:static !important;
+}
+
+.site-header {
+    position: fixed;
+    box-shadow: 0px 0px 5px 0px;
+    height: 50px;
+    width: 100%;
+    z-index: 100;
+    background: #fff;
+	.inner {
+		a.logo {
+			display: block;
+			float: left;
+			margin-top: 20px;
+			margin-left: 10px;
+		}
+		.main-navigation {
+			//float: right;
+		}
+		a.mobile-menu {
+			display: none;
+			width: 50px;
+			float: right;
+			margin: 20px 20px 0 0;
+			img {
+				width: 100%;
+			}
+		}
+		.mobile-navigation {
+			display: none;
+		}
+	}
+	@media ( max-width: $breakpoint-mobile ) {
+		.inner {
+			a.logo {
+				
+			}
+			.main-navigation {
+				display: none;
+			}
+			a.mobile-menu {
+				display: block;
+			}
+		}
+	}
+}
+
+
+.site-content {
+	position: relative;
+	margin-top: 50px;
+	padding-bottom: $footer-height;
+	height: 100%;
+	background:#000000;
+}
+
+
+.site-footer {
+	position: absolute;
+	bottom: 0; left: 0;
+	width: 100%;
+	height: $footer-height;
+    background: #fff;
+    box-shadow: 0px 0px 5px 0px;	
+	.inner {
+		height: 100%;
+		a.huku {
+			position: absolute;
+			top: 15px;
+			right: 21px;
+			width: 22px;
+			height: 29px;			
+			padding: 5px;
+			svg {
+				width: 100%;
+				height: 100%;
+				fill: #fff;
+			}
+		}
+	}
+}
+
+
+.old-browser {
+	position: relative;	
+	.message {		
+		padding: 20px;
+		width: 100%;		
+		text-align: center;
+		background: #e4da87;
+	}
+	a.update {
+		display: inline-block;
+		padding: 5px 10px;
+		background: #fff;
+		color: #262626;
+		font-weight: bold;
+		border: 1px solid #262626;
+		text-decoration: none;
+		&:hover {
+			background: #262626;
+			color: #fff;
+		}
+	}
+}

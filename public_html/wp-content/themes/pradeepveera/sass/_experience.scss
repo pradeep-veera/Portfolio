@@ -1,0 +1,36 @@
+
+#page_experience{
+	.content{
+		ul.experiences{
+			list-style:none;
+			li.experience{
+				display: block;
+				margin: 0px 0px 30px 0px;		
+				position:relative;
+				.experience-name{
+					position: relative;
+					font-size: 25px;	
+					padding-bottom: 30px;					
+					.glyphicon-tasks{
+						position: absolute;
+						left: -35px;
+						top: 5px;				
+					}
+				}
+				.experience-level{
+					display: block;
+					width: 100%;
+					margin: 10px 0px;					
+				}
+				.year{
+					position: absolute;
+					right: 0;
+					top: -15px;
+					font-size: 40px;
+					font-weight: 500;
+					opacity: 0.2;
+				}					
+			}
+		}		
+	}
+}

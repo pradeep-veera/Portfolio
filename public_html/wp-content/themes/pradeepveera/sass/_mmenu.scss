@@ -1,0 +1,134 @@
+
+html.mmenu-open {
+	@media ( max-width: $breakpoint-mobile ) {
+		overflow: hidden;		
+	}
+}
+
+.mmenu {
+	opacity: 0;
+	transition: opacity 0s linear 1s;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: auto;
+	right: 0;
+	width: 80%;
+    min-width: 140px;
+    max-width: 440px;
+	overflow: hidden;
+	.menu-header {
+		position: relative;
+		padding: 30px;
+		height: 100px;		
+		.headline {
+			font-family: $navi-font;
+			font-weight: 700;
+			font_size: 16px;			
+			text-transform: uppercase;
+		}
+		.breadcrumb {
+			color: #fff;
+		}
+	}
+	.panels {		
+		position: absolute;
+		top: 100px;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: #333;
+		.mmenu-open & {
+			-webkit-overflow-scrolling: touch;
+			overflow: scroll;
+			overflow-x: hidden;
+			overflow-y: auto;			
+		}
+		ul {
+			position: relative;
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			transition: transform 500ms;
+			li {
+				position: relative;
+				padding: 5px 0;
+				border-bottom: 2px solid #4a5766;
+				@extend %noselect;
+				a {
+					display: block;
+					padding: 10px 20px;
+					font-family: $navi-font;
+					font-size: 16px;
+					font-weight: 700;
+					color: #fff;
+					text-decoration: none;
+					text-transform: uppercase;
+				}
+				.open-submenu {
+					position: absolute;
+					top: 7px;
+					right: 0px;
+					cursor: pointer;
+					@extend %noselect;
+					&:before {
+						content: "";
+						position: absolute;
+						top: 12px;
+						right: 20px;
+						width: 13px;
+						height: 13px;
+						border-top: 1px solid rgba(255,255,255,0.5);
+						border-right: 1px solid rgba(255,255,255,0.5);
+						transform: rotate(45deg);
+					}
+					.count {
+						padding: 7px 45px 0 0;
+						font-family: $navi-font;
+						font-size: 16px;						
+						color: rgba(255,255,255,0.5);
+					}
+				}
+				&.back-button {
+					&:before {
+						content: "";
+						position: absolute;
+						top: 19px;
+						left: 20px;
+						width: 13px;
+						height: 13px;
+						border-bottom: 1px solid rgba(255,255,255,0.5);
+						border-left: 1px solid rgba(255,255,255,0.5);
+						transform: rotate(45deg);
+					}
+				}
+				&.current-menu-item {
+					
+				}
+			}
+		}
+		.menu {
+			position: relative;
+			right: 0;
+			//transition: all 500ms linear;
+		}
+		.sub-menu {
+			//display: none;
+			position: absolute;
+			top: 0;
+			right: 0;
+			left: 0;
+			width: 100%;
+			transform: translate(100%,0);
+			li {
+				a {
+					text-align: right;
+				}
+			}
+		}
+	}
+	.mmenu-open & {
+		opacity: 1;
+		transition: none;
+	}
+}

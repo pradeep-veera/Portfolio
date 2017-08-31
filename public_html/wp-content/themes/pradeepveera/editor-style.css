@@ -1,0 +1,672 @@
+/* =Reset
+ -------------------------------------------------------------- */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+  border: 0;
+  font-family: inherit;
+  font-size: 100%;
+  font-style: inherit;
+  font-weight: inherit;
+  margin: 0;
+  outline: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+html {
+  overflow-y: scroll;
+  /* Keeps page centred in all browsers regardless of content height */
+  -webkit-text-size-adjust: 100%;
+  /* Prevents iOS text size adjust after orientation change, without disabling user zoom */
+  -ms-text-size-adjust: 100%;
+  /* www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/ */
+}
+*, *:before, *:after {
+  /* apply a natural box layout model to all elements; see http://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body {
+  background: #fff;
+}
+article, aside, details, figcaption, figure, footer, header, main, nav, section {
+  display: block;
+}
+ol, ul {
+  list-style: none;
+}
+table {
+  /* tables still need 'cellspacing="0"' in the markup */
+  border-collapse: separate;
+  border-spacing: 0;
+}
+caption, th, td {
+  font-weight: normal;
+  text-align: left;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+}
+blockquote, q {
+  quotes: "" "";
+}
+a:focus {
+  outline: 0;
+}
+a:hover, a:active {
+  outline: 0;
+}
+a img {
+  border: 0;
+}
+.clear:before, .entry-content:before, .comment-content:before, .site-header:before, .site-content:before, .site-footer:before, .main-navigation > ul:before, .gallery:before, .clear:after, .entry-content:after, .comment-content:after, .site-header:after, .site-content:after, .site-footer:after, .main-navigation > ul:after, .gallery:after {
+  content: "";
+  display: table;
+}
+.clear:after, .entry-content:after, .comment-content:after, .site-header:after, .site-content:after, .site-footer:after, .main-navigation > ul:after, .gallery:after {
+  clear: both;
+}
+/* =Global
+ ----------------------------------------------- */
+/* Alignment */
+.alignleft {
+  display: inline;
+  float: left;
+  margin-right: 1.5em;
+}
+.alignright {
+  display: inline;
+  float: right;
+  margin-left: 1.5em;
+}
+.aligncenter {
+  clear: both;
+  display: block;
+  margin: 0 auto;
+}
+/* Text meant only for screen readers */
+.screen-reader-text {
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
+}
+.screen-reader-text:hover, .screen-reader-text:active, .screen-reader-text:focus {
+  background-color: #f1f1f1;
+  border-radius: 3px;
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+  clip: auto !important;
+  color: #21759b;
+  display: block;
+  font-size: 14px;
+  font-weight: bold;
+  height: auto;
+  left: 5px;
+  line-height: normal;
+  padding: 15px 23px 14px;
+  text-decoration: none;
+  top: 5px;
+  width: auto;
+  z-index: 100000;
+  /* Above WP toolbar */
+}
+/* Clearing */
+body, button, input, select, textarea {
+  color: #404040;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 15px;
+  line-height: 1.33;
+}
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 400;
+  clear: both;
+}
+hr {
+  background-color: #ccc;
+  border: 0;
+  height: 1px;
+  margin-bottom: 1.5em;
+}
+/* Text elements */
+p {
+  margin-bottom: 1.5em;
+  font-weight: 300;
+}
+ul, ol {
+  margin: 0 0 1.5em 3em;
+}
+ul {
+  list-style: disc;
+  font-weight: 300;
+}
+ol {
+  list-style: decimal;
+}
+li > ul, li > ol {
+  margin-bottom: 0;
+  margin-left: 1.5em;
+}
+dt {
+  font-weight: bold;
+}
+dd {
+  margin: 0 1.5em 1.5em;
+}
+b, strong {
+  font-weight: bold;
+}
+dfn, cite, em, i {
+  font-style: italic;
+}
+blockquote {
+  margin: 0 1.5em;
+}
+address {
+  margin: 0 0 1.5em;
+}
+pre {
+  background: #eee;
+  font-family: "Courier 10 Pitch", Courier, monospace;
+  font-size: 15px;
+  font-size: 1.5rem;
+  line-height: 1.6;
+  margin-bottom: 1.6em;
+  padding: 1.6em;
+  overflow: auto;
+  max-width: 100%;
+}
+code, kbd, tt, var {
+  font: 15px Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+}
+abbr, acronym {
+  border-bottom: 1px dotted #666;
+  cursor: help;
+}
+mark, ins {
+  background: #fff9c0;
+  text-decoration: none;
+}
+sup, sub {
+  font-size: 75%;
+  height: 0;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  bottom: 1ex;
+}
+sub {
+  top: 0.5ex;
+}
+small {
+  font-size: 75%;
+}
+big {
+  font-size: 125%;
+}
+figure {
+  margin: 0;
+}
+table {
+  margin: 0 0 1.5em;
+  width: 100%;
+}
+th {
+  font-weight: bold;
+}
+img {
+  height: auto;
+  /* Make sure images are scaled correctly. */
+}
+/* Links */
+a {
+  color: #404040;
+}
+a:visited {
+  color: #404040;
+}
+a:focus {
+  color: #404040;
+}
+a:hover {
+  color: #404040;
+}
+h1 {
+  font-size: 4.5em;
+  opacity: 0.5;
+  text-transform: uppercase;
+}
+h1.entry-title {
+  font-size: 1.8em;
+}
+h1.entry-title a {
+  font-size: 0.8em;
+  display: block;
+  text-decoration: none;
+  border-bottom: 1px solid #c0c0c0;
+  background-color: #f2f2f2;
+}
+.page-content h1, .entry-content h1, .entry-summary h1, .page-content h2, .entry-content h2, .entry-summary h2, .page-content h3, .entry-content h3, .entry-summary h3, .page-content h4, .entry-content h4, .entry-summary h4, .page-content h5, .entry-content h5, .entry-summary h5, .page-content h6, .entry-content h6, .entry-summary h6 {
+  margin: 0 0 0.2em;
+}
+.page-content h2, .entry-content h2, .entry-summary h2 {
+  font-size: 1.3em;
+}
+.page-content h3, .entry-content h3, .entry-summary h3 {
+  font-size: 1.15em;
+}
+button, input, select, textarea {
+  font-size: 100%;
+  /* Corrects font size not being inherited in all browsers */
+  margin: 0;
+  /* Addresses margins set differently in IE6/7, F3/4, S5, Chrome */
+  vertical-align: baseline;
+  /* Improves appearance and consistency in all browsers */
+  *vertical-align: middle;
+  /* Improves appearance and consistency in all browsers */
+}
+button, input[type="button"], input[type="reset"], input[type="submit"] {
+  border: 1px solid #d0d0d0;
+  border-radius: 3px;
+  background: #e6e6e6;
+  box-shadow: none;
+  color: #404040;
+  cursor: pointer;
+  /* Improves usability and consistency of cursor style between image-type 'input' and others */
+  -webkit-appearance: button;
+  /* Corrects inability to style clickable 'input' types in iOS */
+  font-size: 16px;
+  font-size: 1.2em;
+  line-height: 1;
+  padding: 0.4em 1em 0.4em;
+  text-shadow: none;
+}
+button:hover, input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover {
+  border: 1px solid #c0c0c0;
+  background: #d6d6d6;
+}
+button:focus, input[type="button"]:focus, input[type="reset"]:focus, input[type="submit"]:focus, button:active, input[type="button"]:active, input[type="reset"]:active, input[type="submit"]:active {
+  outline: 0;
+  border: 1px solid #c0c0c0;
+}
+input[type="checkbox"], input[type="radio"] {
+  padding: 0;
+  /* Addresses excess padding in IE8/9 */
+}
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* Addresses appearance set to searchfield in S5, Chrome */
+  -webkit-box-sizing: content-box;
+  /* Addresses box sizing set to border-box in S5, Chrome (include -moz to future-proof) */
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+input[type="search"]::-webkit-search-decoration {
+  /* Corrects inner padding displayed oddly in S5, Chrome on OSX */
+  -webkit-appearance: none;
+}
+button::-moz-focus-inner, input::-moz-focus-inner {
+  /* Corrects inner padding and border displayed oddly in FF3/4 www.sitepen.com/blog/2008/05/14/the-devils-in-the-details-fixing-dojos-toolbar-buttons/ */
+  border: 0;
+  padding: 0;
+}
+input[type="text"], input[type="email"], input[type="url"], input[type="password"], input[type="search"], textarea {
+  padding: 3px;
+  width: 100%;
+  outline-color: #fff;
+  border-top: 1px solid transparent;
+  border-right: 1px solid transparent;
+  border-left: 1px solid transparent;
+  border-bottom: 1px solid #ccc;
+}
+input[type="text"]:focus, input[type="email"]:focus, input[type="url"]:focus, input[type="password"]:focus, input[type="search"]:focus, textarea:focus {
+  color: #111;
+}
+input[type="text"], input[type="email"], input[type="url"], input[type="password"], input[type="search"] {
+  padding: 3px;
+}
+textarea {
+  overflow: auto;
+  /* Removes default vertical scrollbar in IE6/7/8/9 */
+  padding-left: 3px;
+  vertical-align: top;
+  /* Improves readability and alignment in all browsers */
+  width: 100%;
+  height: 100px;
+}
+.field {
+  display: block;
+  margin: 10px 0px;
+}
+#kontaktformular {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  padding: 0px 30px 0px 15px;
+  justify-content: space-between;
+}
+#kontaktformular .left {
+  display: flex;
+  width: 48%;
+  order: 1;
+  flex-direction: column;
+}
+#kontaktformular .right {
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+  order: 2;
+}
+#kontaktformular .message {
+  width: 100%;
+  order: 3;
+}
+#kontaktformular .submit {
+  order: 4;
+  width: 100%;
+}
+#kontaktformular .please-fill-in {
+  border-bottom: 1px solid #000;
+}
+/* =Menu
+ ----------------------------------------------- */
+.main-navigation > ul {
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+}
+.main-navigation > ul > li {
+  float: left;
+  position: relative;
+  margin: 0 10px;
+  display: block;
+  width: auto;
+}
+.main-navigation > ul > li > a {
+  display: block;
+  padding: 14px 10px 5px 10px;
+  color: #404040;
+  width: 100%;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.main-navigation > ul > li:hover > ul {
+  display: inline-block;
+}
+.main-navigation > ul > li:hover > a, .main-navigation > ul > li.current-menu-item > a, .main-navigation > ul > li.current-menu-parent > a {
+  border-bottom: 1px dashed #404040;
+}
+.main-navigation > ul li.insta {
+  position: absolute;
+  right: 40px;
+}
+.main-navigation > ul li.insta a {
+  color: transparent;
+}
+.main-navigation > ul li.insta a:before {
+  content: "";
+  background: url(images/linkedin_alt.svg);
+  background-repeat: no-repeat;
+  width: 35px;
+  background-size: cover;
+  height: 35px;
+  display: block;
+  position: absolute;
+  bottom: -6px;
+}
+.main-navigation > ul li.insta:hover a {
+  border-bottom: none;
+}
+.main-navigation > ul li.face {
+  position: absolute;
+  right: 0px;
+}
+.main-navigation > ul li.face a {
+  color: transparent;
+}
+.main-navigation > ul li.face a:before {
+  content: "";
+  background: url(images/facebook_alt.svg);
+  background-repeat: no-repeat;
+  width: 35px;
+  background-size: cover;
+  height: 35px;
+  display: block;
+  position: absolute;
+  bottom: -6px;
+}
+.main-navigation > ul li.face:hover a {
+  border-bottom: none;
+}
+.main-navigation > ul li.git {
+  position: absolute;
+  right: 100px;
+  bottom: -3px;
+}
+.main-navigation > ul li.git a {
+  color: transparent;
+}
+.main-navigation > ul li.git a:before {
+  content: "";
+  background: url(images/github.svg);
+  background-repeat: no-repeat;
+  width: 35px;
+  background-size: cover;
+  height: 35px;
+  display: block;
+  position: absolute;
+  bottom: -6px;
+}
+.main-navigation > ul li.git:hover a {
+  border-bottom: none;
+}
+.main-navigation > ul ul {
+  display: none;
+  list-style: none;
+  width: 200px;
+  margin: 0px 0px 0px -100px;
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  padding: 12px 20px 20px;
+  z-index: 99;
+}
+.main-navigation > ul ul li {
+  margin: 2px 0px;
+  float: none;
+  display: block;
+}
+.main-navigation > ul ul li a {
+  display: block;
+  padding: 5px 10px;
+  text-align: center;
+  color: #fff;
+  background: #e11d2a;
+  text-decoration: none;
+  text-transform: none;
+}
+.main-navigation > ul ul li:hover a, .main-navigation > ul ul li.current-menu-item a, .main-navigation > ul ul li.current-menu-parent a {
+  color: #303030;
+}
+/* =Content
+ ----------------------------------------------- */
+.hentry {
+  margin: 0 0 1.5em;
+}
+.byline, .updated {
+  display: none;
+}
+.single .byline, .group-blog .byline {
+  display: inline;
+}
+.entry-meta .posted-on {
+  display: inline-block;
+  margin: 0.5em 0;
+  color: #c0c0c0;
+}
+.page-content, .entry-content, .entry-summary {
+  margin: 1.5em 0 0 0;
+}
+.page-content a.more-link, .entry-content a.more-link, .entry-summary a.more-link {
+  display: inline-block;
+  margin: 0.5em 0;
+}
+.page-links {
+  clear: both;
+  margin: 0 0 1.5em;
+}
+.glyphicon-education {
+  position: absolute;
+  left: -40px;
+}
+#google-map {
+  height: 500px;
+}
+/* =Media
+ ----------------------------------------------- */
+.page-content img.wp-smiley, .entry-content img.wp-smiley, .comment-content img.wp-smiley {
+  border: none;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding: 0;
+}
+.wp-caption {
+  border: 1px solid #ccc;
+  margin-bottom: 1.5em;
+  max-width: 100%;
+}
+.wp-caption img[class*="wp-image-"] {
+  display: block;
+  margin: 1.2% auto 0;
+  max-width: 98%;
+}
+.wp-caption .wp-caption-text {
+  text-align: center;
+  margin: 0.8075em 0;
+}
+.gallery {
+  margin-bottom: 1.5em;
+}
+.gallery .gallery-item {
+  float: left;
+}
+.gallery .gallery-item .gallery-icon a {
+  display: block;
+}
+.gallery .gallery-item .gallery-icon img {
+  border: none;
+  height: auto;
+  margin-bottom: 0;
+}
+.gallery .gallery-item .gallery-caption {
+  margin: 0;
+  text-align: center;
+}
+/* Fluid Gallery Columns
+ works well if you remove the default gallery styling
+ by adding the following to your functions.php
+ add_filter( 'use_default_gallery_style', '__return_false' );
+ */
+.gallery-columns-2 .gallery-item {
+  width: 49%;
+  margin-right: 2;
+}
+.gallery-columns-2 .gallery-item:nth-of-type(2n - 2) {
+  margin-right: 0;
+  clear: right;
+}
+.gallery-columns-3 .gallery-item {
+  width: 32%;
+  margin-right: 2;
+}
+.gallery-columns-3 .gallery-item:nth-of-type(3n - 3) {
+  margin-right: 0;
+  clear: right;
+}
+.gallery-columns-4 .gallery-item {
+  width: 23.5%;
+  margin-right: 2;
+}
+.gallery-columns-4 .gallery-item:nth-of-type(4n - 4) {
+  margin-right: 0;
+  clear: right;
+}
+.gallery-columns-5 .gallery-item {
+  width: 18.4%;
+  margin-right: 2;
+}
+.gallery-columns-5 .gallery-item:nth-of-type(5n - 5) {
+  margin-right: 0;
+  clear: right;
+}
+.gallery-columns-6 .gallery-item {
+  width: 15%;
+  margin-right: 2;
+}
+.gallery-columns-6 .gallery-item:nth-of-type(6n - 6) {
+  margin-right: 0;
+  clear: right;
+}
+.gallery-columns-7 .gallery-item {
+  width: 12.57143%;
+  margin-right: 2;
+}
+.gallery-columns-7 .gallery-item:nth-of-type(7n - 7) {
+  margin-right: 0;
+  clear: right;
+}
+.gallery-columns-8 .gallery-item {
+  width: 10.75%;
+  margin-right: 2;
+}
+.gallery-columns-8 .gallery-item:nth-of-type(8n - 8) {
+  margin-right: 0;
+  clear: right;
+}
+.gallery-columns-9 .gallery-item {
+  width: 9.33333%;
+  margin-right: 2;
+}
+.gallery-columns-9 .gallery-item:nth-of-type(9n - 9) {
+  margin-right: 0;
+  clear: right;
+}
+/* Make sure embeds and iframes fit their containers */
+embed, iframe, object {
+  max-width: 100%;
+}
+/* =Navigation
+ ----------------------------------------------- */
+.site-main [class*="navigation"] {
+  margin: 0 0 1.5em;
+  overflow: hidden;
+}
+.site-main [class*="navigation"] .nav-previous {
+  float: left;
+  width: 50%;
+}
+.site-main [class*="navigation"] .nav-next {
+  float: right;
+  text-align: right;
+  width: 50%;
+}
+/* =Widgets
+ ----------------------------------------------- */
+.widget {
+  margin: 0 0 1.5em;
+  /* Make sure select elements fit in widgets */
+  /* Search widget */
+}
+.widget select {
+  max-width: 100%;
+}
+.widget .widget-search .search-submit {
+  display: none;
+}
+html .mceContentBody {
+  width: 960px;
+  padding: 0px;
+}

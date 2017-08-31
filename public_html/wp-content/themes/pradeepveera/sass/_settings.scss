@@ -1,0 +1,29 @@
+
+
+
+$content-width: 960px;
+$footer-height: 20px;
+
+
+$base-font: 'Roboto Mono', monospace;
+$header-font: 'Roboto Mono', monospace;
+$navi-font: $header-font; 
+
+
+$font-color: #404040;
+$font-size: 15px;
+$font-weight: normal;
+$line-height: 1.33;
+
+
+$link-color: $font-color;
+$hover-link-color: $font-color;
+
+
+// Supported Values for $layout:
+//  null | content-sidebar | sidebar-content
+$vspacing: 1.5em;
+
+
+
+$breakpoint-mobile: 767px;
